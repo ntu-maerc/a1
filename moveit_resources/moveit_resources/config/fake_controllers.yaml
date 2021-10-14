@@ -1,0 +1,10 @@
+controller_list:
+  - name: fake_robotic_arm_controller
+    type: $(arg execution_type)
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+initial:  # Define initial robot poses.
+  - group: robotic_arm
+    pose: rest_pose

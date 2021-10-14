@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robotic_arm_description
+    relative_path: urdf/robotic_arm_assembly.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/robotic_arm_assembly.srdf
+  CONFIG:
+    author_name: Venkat
+    author_email: venk0023@e.ntu.edu.sg
+    generated_timestamp: 1634147001

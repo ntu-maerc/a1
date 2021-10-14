@@ -1,0 +1,17 @@
+<package>
+  <name>robotic_arm_description</name>
+  <version>1.0.0</version>
+  <description>robotic_arm Resources used for MoveIt! testing</description>
+
+  <author email="venk0023@e.ntu.edu.sg">Venkat</author>
+  <author email="venk0023@e.ntu.edu.sg">Venkat</author>
+
+  <maintainer email="venk0023@e.ntu.edu.sg">Venkat</maintainer>
+
+  <license>BSD</license>
+  <url type="website">http://moveit.ros.org</url>
+  <url type="bugtracker">https://github.com/ros-planning/moveit-resources/issues</url>
+  <url type="repository">https://github.com/ros-planning/moveit-resources</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>
