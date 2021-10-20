@@ -10,6 +10,11 @@ roslaunch moveit_resources demo_gazebo.launch
   To move the arm to a specific joint configuration navigate to the folder moveit_resources/scripts  
   Open up the file mymove.py and in line 32 group.go() pass the joint positions as a list.  
     
+  Allow mymove.py to have executiable permissions with-
+  ```
+  sudo chmod +x mymove.py
+  ```
+    
   Then open up a new terminal and type-
   ```
   roslaunch moveit_resources planning_context.launch
