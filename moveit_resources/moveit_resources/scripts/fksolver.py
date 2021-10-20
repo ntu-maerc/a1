@@ -83,7 +83,5 @@ if __name__ == '__main__':
     rospy.logerr("Querying for FK")
     gfk = GetFK('end_effector', 'base_link')
     resp = gfk.get_current_fk()
-#    from moveit_python_tools.friendly_error_codes import moveit_error_dict
-#    rospy.logerr(moveit_error_dict[resp.error_code.val])
     rospy.logerr(resp)
 
