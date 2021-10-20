@@ -150,7 +150,7 @@ class RobotCommander(object):
                 self._robot.get_planning_frame(),
             )
 
-    def __init__(self, robot_description="robot_description", ns=""):
+    def __init__(self, robot_description="robot_description", ns="arm"):
         self._robot_description = robot_description
         self._ns = ns
         self._r = _moveit_robot_interface.RobotInterface(robot_description, ns)

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="ns" default="arm"/>
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0"/>
+  <arg name="roll" default="0"/>
+  <arg name="pitch" default="0"/>
+  <arg name="yaw" default="0"/>
+  <arg name="urdf_path" default="$(find robotic_arm_description)/urdf/robotic_arm_assembly.urdf"/>
+  <!--use moveit : controller=:trajectory / else: controller:=position-->
+
+  <!-- doosan robot & mobile-robot PID configurations from YAML file to parameter server -->
+  <!--group ns="$(arg ns)">
+    <rosparam file="$(find dsr_gazebo)/config/gazebo_ros_control_params.yaml" command="load"/>
+  </group-->
+
+<!--    <include file="$(find moveit_resources)/launch/arm_fake_control.launch">-->
+<!--      <arg name="ns" value="$(arg ns)"/>-->
+<!--      <arg name="yaml"          value="arm_control"/>-->
+<!--    </include>-->
+    <!-- 제어기를 위한 controller -->
+    <include file="$(find moveit_resources)/launch/arm_control.launch">
+      <arg name="ns"            value="$(arg ns)"/>
+      <arg name="yaml"          value="arm_control"/>
+    </include>
+
+  <!-- Generate the model for gazebo and publish the robots joint states. -->
+  <param name="robot_description" textfile="$(arg urdf_path)" />
+
+  <!-- push robot_description to factory and spawn robot in gazebo at the origin, change x,y,z arguments to spawn in a different position -->
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -x 0 -y 0 -z 0"
+    respawn="false" output="screen" />
+
+  <!-- ARM은 /world에 fixed되어 있으므로 map에 열결
+  Usage: static_transform_publisher x y z yaw pitch roll frame_id child_frame_id  period (milliseconds) -->
+  <node pkg="tf2_ros" type="static_transform_publisher" ns="arm" name="virtual_joint_broadcaster_0" args="0 0 0 0 0 0 world base_link"/>
+
+
+  <!-- Mobile은 /base_link에 fixed되어 있으므로 map에 연결 -->
+  <!-- removed -->
+
+  <!-- odom tf를 사용하여 로봇 움직임을 rviz에서 표현 -->
+
+
+  <!-- Spawn the model into gazebo. -->
+<!--    <node name="spawn_create_model" pkg="gazebo_ros" type="spawn_model" ns="$(arg ns)"-->
+<!--    args="-x $(arg x) -y $(arg y) -z $(arg z) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)-->
+<!--    -urdf -param /$(arg ns)/robot_description -model $(arg ns)"/>-->
+
+</launch>

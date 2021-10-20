@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<launch>
+	<arg name="ns" default="arm" />
+        <arg name="yaml"    default="arm_control"/>
+       
+		<rosparam command="load" file="$(find moveit_resources)/config/$(arg yaml).yaml" ns="$(arg ns)" />
+		<node name="controller_spawner1" pkg="controller_manager" type="spawner" output="screen" args="arm_joint_position_controller" ns="$(arg ns)">
+		</node>
+</launch>

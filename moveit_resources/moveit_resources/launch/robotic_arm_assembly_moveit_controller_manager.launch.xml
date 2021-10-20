@@ -9,5 +9,5 @@
   <param name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
 
   <!-- loads ros_controllers to the param server -->
-  <rosparam file="$(find moveit_resources)/config/ros_controllers.yaml"/>
+  <rosparam file="$(find moveit_resources)/config/arm_control.yaml"/>
 </launch>

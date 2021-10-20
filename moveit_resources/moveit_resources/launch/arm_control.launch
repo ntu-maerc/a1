@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<launch>
+	<arg name="ns" default="arm"/>
+    <arg name="yaml" default="arm_control"/>
+    <!--use moveit : controller=:trajectory / else: controller:=position-->
+
+	<!-- Run Doosan Robot emulator in virtual mode -->
+
+	<!-- 제어기를 위한 position_controller, joint_state 정의 -->
+	<rosparam command="load" file="$(find moveit_resources)/config/$(arg yaml).yaml" ns="arm" />
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen"
+				args="arm_joint_trajectory_controller arm_joint_publisher" ns="arm">
+	</node>
+
+    <!--node pkg="dsr_control" type="run.sh" name="foo"/-->
+	<!--node pkg="aliencontrol" type="aliencontrol" name="aliencontrol"-->
+    <!--param name="cmd" value="run.sh"/-->
+	<!--param name="cmd" value="xterm -e top"/-->
+    <!--param name="cmd" value="xterm -e hello"/-->
+	<!--/node-->
+
+<!--	<node pkg="dsr_control" type="dsr_control_node" name="$(arg ns)$(arg model)" respawn="false" output="screen">-->
+<!--		<param name="name" value="$(arg ns)" />-->
+		<!--gazebo를 위한 joint position 명령-->
+<!--		<remap from="/arm_joint_position_controller/command" to="/$(arg ns)/arm_joint_position_controller/command" />-->
+<!--	</node>-->
+</launch>
