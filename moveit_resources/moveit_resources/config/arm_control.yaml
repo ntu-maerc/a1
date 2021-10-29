@@ -5,6 +5,7 @@ arm_joint_position_controller:
     - joint_2
     - joint_3
     - joint_4
+    - joint_5
   publish_rate: 20
 arm_joint_trajectory_controller:
   type: position_controllers/JointTrajectoryController
@@ -13,6 +14,7 @@ arm_joint_trajectory_controller:
     - joint_2
     - joint_3
     - joint_4
+    - joint_5
   publish_rate: 20
 arm_joint_publisher:
   type: joint_state_controller/JointStateController
@@ -26,6 +28,7 @@ controller_list:
       - joint_2
       - joint_3
       - joint_4
+      - joint_5
 #dsr_joint1_position:
 #  type: position_controllers/JointPositionController
 #  joint: joint1
