@@ -1,25 +1,16 @@
 # a1
 Repo for Advanced Group 1  
-
+### Some required changes  
+In line 109 and 130 of the myworld.world file in robotic_arm_description/worlds, change the path of the mesh file to the path of the file on ur machine.
 ### Run the simulation  
 ```
 roslaunch moveit_resources demo_gazebo.launch
   ```  
-  Now u can plan and execute from rviz using the moveit plugin and see the arm moving in gazebo.
+  Now u can plan and execute from rviz using the moveit plugin and see the arm moving in gazebo.  
+  U can change the position and orientation of the fork in the world, u can move it around using the rotation and translation tools, but this change is not permanent.
   
-  To move the arm to a specific joint configuration navigate to the folder moveit_resources/scripts  
-  Open up the file mymove.py and in line 32 group.go() pass the joint positions as a list.  
-    
-  Allow mymove.py to have executiable permissions with-
-  ```
-  sudo chmod +x mymove.py
-  ```
-    
-  Then open up a new terminal and type-
-  ```
-  roslaunch moveit_resources planning_context.launch
-  ```  
-  Now run the script
-  ```
-  rosrun moveit_resources mymove.py
-  ```
+To change the fork position permanently,  
+```
+roslaunch moveit_resources customw.launch
+```
+Now change the position or u can even add more forks/spoons using the model editor tool and save the world in robotic_arm_description/worlds/myworld.world.
