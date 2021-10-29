@@ -14,3 +14,4 @@ To change the fork position permanently,
 roslaunch moveit_resources customw.launch
 ```
 Now change the position or u can even add more forks/spoons using the model editor tool and save the world in robotic_arm_description/worlds/myworld.world.
+To change the size of the fork, change the scale parameter in line 110 and line 131 of myworld.world file.
