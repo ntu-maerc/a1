@@ -1,6 +1,6 @@
 <launch>
   <!-- By default we do not overwrite the URDF. Change the following to true to change the default behavior -->
-  <arg name="load_robot_description" default="false"/>
+  <arg name="load_robot_description" default="true"/>
 
   <!-- The name of the parameter under which the URDF is loaded -->
   <arg name="robot_description" default="robot_description"/>
@@ -15,6 +15,7 @@
   <group ns="$(arg robot_description)_planning">
     <rosparam command="load" file="$(find moveit_resources)/config/joint_limits.yaml"/>
     <rosparam command="load" file="$(find moveit_resources)/config/cartesian_limits.yaml"/>
+<!--    <remap from ="/arm/robot_description_semantic" to ="/robot_description_semantic"/>-->
   </group>
 
   <!-- Load default settings for kinematics; these settings are overridden by settings in a node's namespace -->

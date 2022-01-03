@@ -8,4 +8,8 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: Venkat
     author_email: venk0023@e.ntu.edu.sg
+<<<<<<< HEAD
     generated_timestamp: 1634820269
+=======
+    generated_timestamp: 1634408451
+>>>>>>> arm_gazebo
