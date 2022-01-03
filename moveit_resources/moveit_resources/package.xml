@@ -3,7 +3,7 @@
   <name>moveit_resources</name>
   <version>0.3.0</version>
   <description>
-     An automatically generated package with all the configuration and launch files for using the robotic_arm_assembly with the MoveIt Motion Planning Framework
+     An automatically generated package with all the configuration and launch files for using the robotic_arm_description with the MoveIt Motion Planning Framework
   </description>
   <author email="venk0023@e.ntu.edu.sg">Venkat</author>
   <maintainer email="venk0023@e.ntu.edu.sg">Venkat</maintainer>
