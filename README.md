@@ -15,3 +15,17 @@ roslaunch moveit_resources customw.launch
 ```
 Now change the position or u can even add more forks/spoons using the model editor tool and save the world in robotic_arm_description/worlds/myworld.world.  
 To change the size of the fork, change the scale parameter in line 110 and line 131 of myworld.world file.
+
+# Projects at NTU MAE Robotics Club
+
+* Part of an NTU MAERC initiative
+
+## Advanced Group 1
+
+* Repository for Advanced Group 2 to build code!
+
+### Steps to clone the repository
+* Launch a terminal and run the command  
+```
+$ git clone https://github.com/ntu-maerc/a1.git 
+```
