@@ -8,7 +8,7 @@
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
   <arg name="yaw" default="0"/>
-  <arg name="urdf_path" default="$(find robotic_arm_description)/urdf/robotic_arm_assembly.urdf"/>
+  <arg name="urdf_path" default="$(find robotic_arm_description)/urdf/robotic_arm_description.urdf"/>
   <!--use moveit : controller=:trajectory / else: controller:=position-->
 
   <!-- doosan robot & mobile-robot PID configurations from YAML file to parameter server -->
