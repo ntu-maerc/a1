@@ -1,3 +1,11 @@
+# Projects at NTU MAE Robotics Club
+
+* Part of an NTU MAERC initiative
+
+## Advanced Group 1
+
+* Repository for Advanced Group 2 to build code!
+
 # Robotic Arm to sort Cutlery
 
 ## Robotic Arm Details
@@ -38,14 +46,6 @@ rosrun robotic_arm_kinematics ik_exec
 ```
 
 ![IK_solver](images/IK.gif)
-
-# Projects at NTU MAE Robotics Club
-
-* Part of an NTU MAERC initiative
-
-## Advanced Group 1
-
-* Repository for Advanced Group 2 to build code!
 
 ### Steps to clone the repository
 
