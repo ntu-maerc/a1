@@ -4,7 +4,7 @@
 
 ## Advanced Group 1
 
-* Repository for Advanced Group 2 to build code!
+* Repository for Advanced Group 1 to build code!
 
 # Robotic Arm to sort Cutlery
 
